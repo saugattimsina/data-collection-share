@@ -1,7 +1,7 @@
 import time
 import re
 import pprint
-
+import json
 
 import requests
 from lxml import html 
@@ -11,8 +11,13 @@ from selenium.webdriver.common.keys import Keys
 
 
 def web_browsing(url):
-    username = "qvvhozvcgpnsejwqks@wqcefp.com"
-    password = "jbc0wgw9f1"
+
+    f = open("account_info.json","rb")
+    inf = json.load(f)
+    username = inf.get("email")
+    password = inf.get("password")
+    f.close()
+
     driver = webdriver.Firefox(executable_path="./geckodriver")
     driver.get(url)
 
