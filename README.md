@@ -4,3 +4,6 @@ My attempt to fully automate collection of old share market data of nepal using 
 auto fake acccount generation using 10minutesmail.com , auto login 
 
 # which will include scraping of trading view chart.
+
+
+# working on it ...... :)
